@@ -13,3 +13,9 @@
 [submodule "bin/prestans-tools"]
 	path = bin/prestans-tools
 	url = https://github.com/prestans/prestans-tools.git
+[submodule "client/closure-compiler"]
+	path = client/closure-compiler
+	url = https://github.com/eternitytech/closure-compiler.git
+[submodule "client/closure-library"]
+	path = client/closure-library
+	url = https://code.google.com/p/closure-library/
