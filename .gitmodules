@@ -1,0 +1,15 @@
+[submodule "app/prestans"]
+	path = app/prestans
+	url = https://github.com/prestans/prestans.git
+[submodule "client/prestans"]
+	path = client/prestans
+	url = https://github.com/prestans/prestans-client.git
+[submodule "etc/closure-compiler"]
+	path = etc/closure-compiler
+	url = https://code.google.com/p/closure-compiler/
+[submodule "etc/etk-closure-externs"]
+	path = etc/etk-closure-externs
+	url = https://github.com/devraj/etk-closure-externs.git
+[submodule "bin/prestans-tools"]
+	path = bin/prestans-tools
+	url = https://github.com/prestans/prestans-tools.git
