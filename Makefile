@@ -39,10 +39,16 @@ prep:
 	mkdir -p app/$(PROJ_NAME)
 	mkdir client
 	mkdir bin
+	mkdir etc
 	mkdir docs
-	svn add *
-	ln -s /usr/local/share/closure-library-read-only/closure/goog client/goog
-	svn propset svn:externals -F svn-externals .
+	mkdir assets
+	git add *
+
+git-repo-setup:
+	git submodule add https://github.com/prestans/prestans.git app/prestans
+	git submodule add https://github.com/prestans/prestans-client.git client/prestans
+	git submodule add https://github.com/eternitytech/closure-compiler.git etc/closure-compiler
+	git submodule add https://github.com/prestans/prestans-tools.git bin/prestans-tools
 
 clean:
 	rm -f client/meddle-web-deps.js
