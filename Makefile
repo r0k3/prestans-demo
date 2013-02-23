@@ -8,7 +8,7 @@ JAVA = java
 CSS_OUTPUT_DIR = static/web/assets
 GSS_PROPERTY_EXCEPTION = --allowed-unrecognized-property user-select --allowed-unrecognized-property user-drag --allowed-unrecognized-property -moz-user-drag
 
-PROJ_NAME = meddle
+PROJ_NAME = prestans_demo
 MAIN_JS = Renderer.js
 
 OPT_LEVEL = ADVANCED_OPTIMIZATIONS
@@ -49,12 +49,7 @@ git-repo-setup:
 	git submodule add https://github.com/prestans/prestans-client.git client/prestans
 	git submodule add https://github.com/eternitytech/closure-compiler.git etc/closure-compiler
 	git submodule add https://github.com/prestans/prestans-tools.git bin/prestans-tools
+	git submodule add https://code.google.com/p/closure-library/ client/closure-library
 
 clean:
-	rm -f client/meddle-web-deps.js
-	rm -f client/meddle-web-renaming-map.js
-	rm -f app/static/web/assets/icons/*
-	rm -f app/static/web/assets/images/*
-	rm -f app/static/web/assets/style.css
-	rm -f app/static/web/js/meddle-ui.js
 	@echo "all clear! start re-buidling :)"
