@@ -6,7 +6,7 @@
 	url = https://github.com/prestans/prestans-client.git
 [submodule "etc/closure-compiler"]
 	path = etc/closure-compiler
-	url = https://code.google.com/p/closure-compiler/
+	url = https://github.com/eternitytech/closure-compiler.git
 [submodule "etc/etk-closure-externs"]
 	path = etc/etk-closure-externs
 	url = https://github.com/devraj/etk-closure-externs.git
