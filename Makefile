@@ -1,20 +1,20 @@
 VERSION = 1.0
 COMPILER = ../bin/compiler/compiler.jar
-CALCDEPS = ../bin/closure/calcdeps.py
+CALCDEPS = ./closure-library/closure/bin/calcdeps.py
 PRESTANS = ./app/
 PREPLATE = ./bin/prestans/preplate2
-GSS_COMPILER = ../../bin/compiler/stylesheets.jar
+GSS_COMPILER = ../../bin/compiler/closure-stylesheets.jar
 JAVA = java 
 CSS_OUTPUT_DIR = static/web/assets
 GSS_PROPERTY_EXCEPTION = --allowed-unrecognized-property user-select --allowed-unrecognized-property user-drag --allowed-unrecognized-property -moz-user-drag
 
-PROJ_NAME = prestans_demo
+PROJ_NAME = demoapp
 MAIN_JS = Renderer.js
 
 OPT_LEVEL = ADVANCED_OPTIMIZATIONS
 
 deps:	
-	cd client/; $(CALCDEPS) -o deps -d goog/ -p $(PROJ_NAME) -p prestans/ --output_file=$(PROJ_NAME)-web-deps.js
+	cd client/; $(CALCDEPS) -o deps -d closure-library/closure/goog/ -p $(PROJ_NAME) -p prestans/ --output_file=$(PROJ_NAME)-web-deps.js
 
 dist: dist-web
 	@echo "build complete! Good luck with the deployment"
@@ -50,6 +50,8 @@ git-repo-setup:
 	git submodule add https://github.com/eternitytech/closure-compiler.git etc/closure-compiler
 	git submodule add https://github.com/prestans/prestans-tools.git bin/prestans-tools
 	git submodule add https://code.google.com/p/closure-library/ client/closure-library
+
+	chmod +x client/closure-library/closure/bin/calcdeps.py
 
 clean:
 	@echo "all clear! start re-buidling :)"
