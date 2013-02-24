@@ -10,7 +10,7 @@ Grab your self a copy of Google's AppEngine SDK v1.7+, you will require Python 2
 
 Clone the demo application repository:
 
-    git clone https://github.com/prestans/prestans-demo 
+    git clone --recursive https://github.com/prestans/prestans-demo 
 
 this should clone everything you need to run the demo application. Start the AppEngine SDK server in the app directory:
 
